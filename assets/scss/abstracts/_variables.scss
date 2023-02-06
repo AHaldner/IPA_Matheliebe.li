@@ -1,0 +1,67 @@
+/* ==========================================================================
+	@variables.scss
+	Variablen
+============================================================================= */
+
+// linear-gradiend
+// ------------------------
+$gradient: linear-gradient(
+  180deg,
+  rgba(0, 0, 0, 0.4) 0%,
+  rgba(0, 0, 0, 0) 100%
+);
+
+// Shadow
+// ------------------------
+$shadow-100: 0px 0px 7px rgba(134, 140, 150, 0.08),
+  0px 8px 7px rgba(134, 140, 150, 0.17);
+$shadow-200: 0px 12px 12px rgba(134, 140, 150, 0.13),
+  0px 29px 40px rgba(134, 140, 150, 0.2);
+$shadow-300: 0px 32px 48px rgba(134, 140, 150, 0.26),
+  0px 40px 48px -24px rgba(134, 140, 150, 0.4);
+
+// Typography
+// ------------------------
+$fontweights: (
+  'regular': 400,
+  'medium': 500,
+  'bold': 700,
+);
+
+$h1: 60px;
+$h2: 60px;
+$h1-mobile: 30px;
+$h2-mobile: 30px;
+$p: 20px;
+
+// Breakpoints
+// ------------------------
+$breakpoint-phone: 600px;
+$breakpoint-tablet: 992px;
+$breakpoint-laptop: 1261px;
+$breakpoint-desktop: 1440px;
+
+// Padding Presets
+// ------------------------
+$padding: (
+  'laptop': 50px,
+  'tablet': 30px,
+  'mobile': 10px,
+);
+
+// Colors
+// ------------------------
+$white: #ffffff;
+$black: #000000;
+$gray: #999999;
+$green: #c8d100;
+$orange: #ed7e00;
+$blue: #2eaee0;
+$yellow: #fdca00;
+$teal: #48888a;
+$purple: #b5007b;
+$red: #cc061d;
+
+// Widths
+// ------------------------
+$content: 800px;

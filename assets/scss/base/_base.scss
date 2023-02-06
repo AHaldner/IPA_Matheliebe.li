@@ -1,0 +1,62 @@
+/* ==========================================================================
+	@_base.scss
+	This file is used to contain all base imports.
+  Files inside this folder can contain global styles used in the project.
+============================================================================= */
+
+* {
+  font-size: 20px;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--wp--preset--color--white);
+}
+
+// Anchor Links
+a {
+  color: var(--wp--preset--color--primary);
+  text-decoration: unset;
+  transition: opacity 0.25s ease-in-out;
+  opacity: 1;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  &:active {
+    color: var(--wp--preset--color--secondary);
+  }
+
+  &:visited {
+    color: var(--wp--preset--color--primary);
+  }
+}
+
+h1 {
+  font-size: $h1-mobile;
+
+  @include laptop {
+    font-size: $h1;
+  }
+}
+
+h2 {
+  font-size: $h2-mobile;
+
+  @include laptop {
+    font-size: $h2;
+  }
+}
+
+p {
+  font-size: $p;
+}

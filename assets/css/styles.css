@@ -1,0 +1,495 @@
+/*
+
+This file is used to contain all abstracts imports.
+Files inside this folder can contain abstract settings, helpers or functions. They have no direct output.
+
+*/
+/* ==========================================================================
+	@variables.scss
+	Variablen
+============================================================================= */
+/* ==========================================================================
+	@_mixins.scss
+	Mixins allow you to define styles that can be re-used throughout your stylesheet.
+============================================================================= */
+/* ==========================================================================
+	@__base-dir.scss
+	This file is used to contain all base imports.
+	Files inside this folder can contain global styles used in the project.
+============================================================================= */
+/* ==========================================================================
+	@_reset.scss
+	A CSS Reset style sheet is a list of rules that 'reset' the default browser styles.
+    Customized for Theme Specific Usage
+============================================================================= */
+body {
+  margin: 0;
+}
+
+ul.menu {
+  padding-inline-start: 0;
+}
+ul.menu li {
+  display: block;
+}
+ul.menu li a {
+  text-decoration: none;
+}
+
+#wpadminbar {
+  display: none;
+}
+
+/* ==========================================================================
+	@_font.scss
+	This file is used to control The font family selection in (X)HTML, CSS, and derived systems specifies
+    a list of prioritized fonts and generic family names
+============================================================================= */
+html * {
+  font-family: "Roboto", sans-serif;
+  transition: font-size 0.15s ease;
+  line-height: 1.618;
+}
+
+/* ==========================================================================
+	@_base.scss
+	This file is used to contain all base imports.
+  Files inside this folder can contain global styles used in the project.
+============================================================================= */
+* {
+  font-size: 20px;
+}
+*:focus {
+  outline: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--wp--preset--color--white);
+}
+
+a {
+  color: var(--wp--preset--color--primary);
+  text-decoration: unset;
+  transition: opacity 0.25s ease-in-out;
+  opacity: 1;
+  cursor: pointer;
+}
+a:hover {
+  opacity: 0.5;
+}
+a:active {
+  color: var(--wp--preset--color--secondary);
+}
+a:visited {
+  color: var(--wp--preset--color--primary);
+}
+
+h1 {
+  font-size: 30px;
+}
+@media (min-width: 1261px) {
+  h1 {
+    font-size: 60px;
+  }
+}
+
+h2 {
+  font-size: 30px;
+}
+@media (min-width: 1261px) {
+  h2 {
+    font-size: 60px;
+  }
+}
+
+p {
+  font-size: 20px;
+}
+
+/*
+
+This file is used to contain all layouts imports.
+Files inside this folder can contain specific element styles and layout.
+
+*/
+.footer {
+  background-color: #fdca00;
+  display: flex;
+  justify-content: space-between;
+  padding: 5em;
+}
+
+.header {
+  display: block;
+  padding: 1.5em;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  box-shadow: 0px 12px 12px rgba(134, 140, 150, 0.13), 0px 29px 40px rgba(134, 140, 150, 0.2);
+  background-color: #ffffff;
+}
+.header__left {
+  width: 350px;
+}
+.header__left h1 {
+  margin: 0;
+}
+
+.nav-menu {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 77px;
+  background-color: #ffffff;
+  transition: 0.5s ease-in-out;
+  overflow: hidden;
+  z-index: 10;
+}
+.nav-menu-inner-links {
+  display: flex;
+  flex-direction: column;
+  padding: 1em 1em 0 1em;
+}
+.nav-menu-inner-links a {
+  color: #000000;
+}
+.nav-menu-inner-home {
+  display: flex;
+  flex-direction: column;
+  padding: 1em 1em 0 1em;
+}
+.nav-menu-inner-home a {
+  color: #000000;
+}
+.nav-menu-closed {
+  height: 0;
+}
+.nav-menu ul {
+  padding: 1em;
+  margin: 0;
+}
+
+#menu-navigation-header-mobile a {
+  color: #000000;
+}
+
+.hide-menu {
+  display: none !important;
+}
+
+.navbar input[type=checkbox],
+.navbar .hamburger-lines {
+  display: none;
+}
+
+.navbar-container input[type=checkbox],
+.navbar-container .hamburger-lines {
+  display: block;
+}
+
+.navbar-container input[type=checkbox] {
+  position: absolute;
+  display: block;
+  height: 32px;
+  width: 30px;
+  top: 62px;
+  left: auto;
+  right: 5em;
+  z-index: 5;
+  opacity: 0;
+}
+
+.navbar-container .hamburger-lines {
+  display: block;
+  height: 23px;
+  width: 35px;
+  position: absolute;
+  top: 70px;
+  left: auto;
+  right: 5em;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.navbar-container .hamburger-lines .line {
+  display: block;
+  height: 4px;
+  width: 100%;
+  border-radius: 10px;
+  background: #999999;
+}
+
+.navbar-container .hamburger-lines .line1 {
+  transform-origin: 0% 0%;
+  transition: transform 0.4s ease-in-out;
+}
+
+.navbar-container .hamburger-lines .line2 {
+  transform-origin: 0% 100%;
+  transition: transform 0.4s ease-in-out;
+}
+
+.navbar-container input[type=checkbox]:checked ~ .menu-items {
+  transform: translateX(0);
+}
+
+.navbar-container input[type=checkbox]:checked ~ .hamburger-lines .line1 {
+  transform: rotate(35deg);
+}
+
+.navbar-container input[type=checkbox]:checked ~ .hamburger-lines .line2 {
+  transform: rotate(-35deg);
+}
+
+.page-content {
+  margin-top: 124px;
+}
+.page-content p,
+.page-content ul {
+  width: 800px;
+  margin: 1em auto;
+}
+
+/**
+  *
+  * File Name: @__template-parts-dir.scss
+  * This file is used to contain all component imports.
+  * Files inside this folder should contain all styles relating to a reusable component.
+  *
+**/
+/* ==========================================================================
+	@__blocks-dir.scss
+    This file is used to contain all Gutenberg block imports.
+    Files inside this folder should contain all styles relating to a reusable Gutenberg Block.
+============================================================================= */
+/* ==========================================================================
+	@_button.scss
+	This file is used for styling the button-block.
+============================================================================= */
+.custom-button {
+  border-radius: 5px;
+  padding: 15px;
+}
+.custom-button-link {
+  display: block;
+  font-size: 20px;
+  text-decoration: none;
+  margin: 1em auto;
+}
+.custom-button svg {
+  float: right;
+  position: relative;
+}
+
+.large {
+  width: 800px;
+}
+
+.small {
+  width: 400px;
+}
+
+.m-gray {
+  background-color: #999999;
+  color: #ffffff;
+}
+.m-green {
+  background-color: #c8d100;
+  color: #ffffff;
+}
+.m-orange {
+  background-color: #ed7e00;
+  color: #ffffff;
+}
+.m-blue {
+  background-color: #2eaee0;
+  color: #ffffff;
+}
+.m-yellow {
+  background-color: #fdca00;
+  color: #ffffff;
+}
+.m-teal {
+  background-color: #48888a;
+  color: #ffffff;
+}
+.m-purple {
+  background-color: #b5007b;
+  color: #ffffff;
+}
+.m-red {
+  background-color: #cc061d;
+  color: #ffffff;
+}
+
+/* ==========================================================================
+	@_slider.scss
+	This file is used for styling the accordion-block.
+============================================================================= */
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+:root {
+  --swiper-theme-color: $black !important;
+}
+
+.slide-image {
+  overflow: hidden;
+  height: 90vh;
+}
+.slide-image img {
+  width: 100%;
+  height: auto;
+}
+
+/* ==========================================================================
+	@_quote.scss
+	This file is used for styling the quote-block.
+============================================================================= */
+.quote {
+  max-width: 100%;
+  margin: auto;
+}
+@media (min-width: 1261px) {
+  .quote {
+    width: 800px;
+  }
+}
+.quote-text {
+  font-weight: 600;
+}
+
+/* ==========================================================================
+	@_fullimage.scss
+	This file is used for styling the fullimage-block.
+============================================================================= */
+.fullimage {
+  width: 100%;
+  overflow: hidden;
+}
+.fullimage img {
+  width: 100%;
+  height: auto;
+}
+
+/* ==========================================================================
+	@_book.scss
+	This file is used for styling the button-block.
+============================================================================= */
+.book-wrapper {
+  background-color: #999999;
+  display: flex;
+  flex-direction: column;
+  width: 800px;
+  margin: auto;
+  padding: 3em;
+  gap: 2.5em;
+}
+@media (min-width: 1261px) {
+  .book-wrapper {
+    flex-direction: row;
+  }
+}
+.book-image {
+  width: 50%;
+  overflow: hidden;
+}
+.book-image img {
+  width: 375px;
+  height: auto;
+}
+.book-text {
+  width: 50%;
+}
+.book-text p {
+  width: unset;
+  margin: 0;
+  color: #ffffff;
+}
+
+/* ==========================================================================
+	@_accordion.scss
+	This file is used for styling the accordion-block.
+============================================================================= */
+.accordion > dt {
+  border-bottom: 2px solid #999999;
+  padding: 10px;
+  position: relative;
+}
+
+.accordion > dt a::after {
+  content: "";
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  height: 16px;
+  width: 16px;
+  transition: 0.6s transform;
+  background-image: url("http://localhost/matheliebe/wp-content/uploads/2023/02/chevron-down1.svg");
+  background-repeat: no-repeat;
+  fill: #000000;
+}
+
+.accordion > dt.accordion-body-show a::after {
+  transform: rotate(180deg);
+  transition: 0.6s transform;
+}
+
+.accordion > dd + dt {
+  margin-top: -1px;
+}
+
+.accordion > dt + dd {
+  border-top: 0;
+  margin: 0;
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 10px;
+  transition: 0.3s max-height;
+}
+
+.accordion > dt + dd.accordion-body-show {
+  transition: 0.3s max-height;
+}
+
+.accordion {
+  max-width: 800px;
+  margin: auto;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+@media (min-width: 1261px) {
+  .accordion {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.accordion a {
+  text-decoration: none;
+  color: #000000;
+  font-weight: 700;
+}
+
+/* ==========================================================================
+	@_spacing.scss
+	This file is used for styling the button-block.
+============================================================================= */
+.spacing-small {
+  height: 60px;
+}
+.spacing-medium {
+  height: 120px;
+}
+.spacing-large {
+  height: 300px;
+}/*# sourceMappingURL=styles.css.map */

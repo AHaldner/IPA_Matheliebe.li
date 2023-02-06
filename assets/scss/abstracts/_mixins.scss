@@ -1,0 +1,39 @@
+/* ==========================================================================
+	@_mixins.scss
+	Mixins allow you to define styles that can be re-used throughout your stylesheet.
+============================================================================= */
+
+// Media Queries
+// ------------------------
+@mixin phone {
+  @media (min-width: $breakpoint-phone) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: $breakpoint-tablet) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media (min-width: $breakpoint-laptop) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $breakpoint-desktop) {
+    @content;
+  }
+}
+
+// Em Calculator
+// ------------------------
+
+$browser-context: 20; // Default
+
+@function em($pixels, $context: $browser-context) {
+  @return #{calc($pixels / $context)}em;
+}

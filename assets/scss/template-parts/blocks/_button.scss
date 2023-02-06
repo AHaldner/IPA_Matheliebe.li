@@ -1,0 +1,71 @@
+/* ==========================================================================
+	@_button.scss
+	This file is used for styling the button-block.
+============================================================================= */
+
+.custom-button {
+  border-radius: 5px;
+  padding: 15px;
+
+  &-link {
+    display: block;
+    font-size: 20px;
+    text-decoration: none;
+    margin: 1em auto;
+  }
+
+  svg {
+    float: right;
+    position: relative;
+  }
+}
+
+.large {
+  width: 800px;
+}
+
+.small {
+  width: 400px;
+}
+
+.m {
+  &-gray {
+    background-color: $gray;
+    color: $white;
+  }
+
+  &-green {
+    background-color: $green;
+    color: $white;
+  }
+
+  &-orange {
+    background-color: $orange;
+    color: $white;
+  }
+
+  &-blue {
+    background-color: $blue;
+    color: $white;
+  }
+
+  &-yellow {
+    background-color: $yellow;
+    color: $white;
+  }
+
+  &-teal {
+    background-color: $teal;
+    color: $white;
+  }
+
+  &-purple {
+    background-color: $purple;
+    color: $white;
+  }
+
+  &-red {
+    background-color: $red;
+    color: $white;
+  }
+}

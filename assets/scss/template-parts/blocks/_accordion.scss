@@ -1,0 +1,63 @@
+/* ==========================================================================
+	@_accordion.scss
+	This file is used for styling the accordion-block.
+============================================================================= */
+
+.accordion > dt {
+  border-bottom: 2px solid $gray;
+  padding: 10px;
+  position: relative;
+}
+
+.accordion > dt a::after {
+  content: '';
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  height: 16px;
+  width: 16px;
+  transition: 0.6s transform;
+  background-image: url('http://localhost/matheliebe/wp-content/uploads/2023/02/chevron-down1.svg');
+  background-repeat: no-repeat;
+  fill: $black;
+}
+
+.accordion > dt.accordion-body-show a::after {
+  transform: rotate(180deg);
+  transition: 0.6s transform;
+}
+
+.accordion > dd + dt {
+  margin-top: -1px;
+}
+
+.accordion > dt + dd {
+  border-top: 0;
+  margin: 0;
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 10px;
+  transition: 0.3s max-height;
+}
+
+.accordion > dt + dd.accordion-body-show {
+  transition: 0.3s max-height;
+}
+
+.accordion {
+  max-width: $content;
+  margin: auto;
+  padding-left: 1em;
+  padding-right: 1em;
+
+  @include laptop {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.accordion a {
+  text-decoration: none;
+  color: $black;
+  font-weight: 700;
+}

@@ -1,0 +1,17 @@
+/* ==========================================================================
+	@_quote.scss
+	This file is used for styling the quote-block.
+============================================================================= */
+
+.quote {
+  max-width: 100%;
+  margin: auto;
+
+  @include laptop {
+    width: $content;
+  }
+
+  &-text {
+    font-weight: 600;
+  }
+}

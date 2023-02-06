@@ -1,0 +1,18 @@
+/* ==========================================================================
+	@_spacing.scss
+	This file is used for styling the button-block.
+============================================================================= */
+
+.spacing {
+  &-small {
+    height: 60px;
+  }
+
+  &-medium {
+    height: 120px;
+  }
+
+  &-large {
+    height: 300px;
+  }
+}

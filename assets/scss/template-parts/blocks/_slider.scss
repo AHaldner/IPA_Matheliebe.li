@@ -1,0 +1,25 @@
+/* ==========================================================================
+	@_slider.scss
+	This file is used for styling the accordion-block.
+============================================================================= */
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+:root {
+  --swiper-theme-color: $black !important;
+}
+
+.slide {
+  &-image {
+    overflow: hidden;
+    height: 90vh;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}

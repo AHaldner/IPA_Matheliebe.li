@@ -1,0 +1,26 @@
+/* ==========================================================================
+	@_reset.scss
+	A CSS Reset style sheet is a list of rules that 'reset' the default browser styles.
+    Customized for Theme Specific Usage
+============================================================================= */
+
+// Remove Base Margin from Body
+body {
+  margin: 0;
+}
+
+// Remove Base WP Navigation Styles
+ul.menu {
+  padding-inline-start: 0;
+  & li {
+    display: block;
+    & a {
+      text-decoration: none;
+    }
+  }
+}
+
+// Hide WP Admin Bar
+#wpadminbar {
+  display: none;
+}

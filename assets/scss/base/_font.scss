@@ -1,0 +1,13 @@
+/* ==========================================================================
+	@_font.scss
+	This file is used to control The font family selection in (X)HTML, CSS, and derived systems specifies
+    a list of prioritized fonts and generic family names
+============================================================================= */
+
+// Initialize Font
+// ------------------------
+html * {
+  font-family: 'Roboto', sans-serif;
+  transition: font-size 0.15s ease;
+  line-height: 1.618;
+}
