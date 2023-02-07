@@ -89,11 +89,11 @@ a:visited {
 }
 
 h1 {
-  font-size: 30px;
+  font-size: 40px;
 }
 @media (min-width: 1261px) {
   h1 {
-    font-size: 60px;
+    font-size: 80px;
   }
 }
 
@@ -103,6 +103,15 @@ h2 {
 @media (min-width: 1261px) {
   h2 {
     font-size: 60px;
+  }
+}
+
+h3 {
+  font-size: 20px;
+}
+@media (min-width: 1261px) {
+  h3 {
+    font-size: 40px;
   }
 }
 
@@ -125,7 +134,7 @@ Files inside this folder can contain specific element styles and layout.
 
 .header {
   display: block;
-  padding: 1.5em;
+  padding: 0.5em 1.5em;
   position: fixed;
   top: 0;
   width: 100%;
@@ -136,15 +145,17 @@ Files inside this folder can contain specific element styles and layout.
 .header__left {
   width: 350px;
 }
-.header__left h1 {
+.header__left span {
   margin: 0;
+  font-size: 30px;
+  font-weight: 600;
 }
 
 .nav-menu {
   position: fixed;
   width: 100%;
   height: 100vh;
-  top: 77px;
+  top: 69px;
   background-color: #ffffff;
   transition: 0.5s ease-in-out;
   overflow: hidden;
@@ -197,7 +208,7 @@ Files inside this folder can contain specific element styles and layout.
   display: block;
   height: 32px;
   width: 30px;
-  top: 62px;
+  top: 16px;
   left: auto;
   right: 5em;
   z-index: 5;
@@ -209,7 +220,7 @@ Files inside this folder can contain specific element styles and layout.
   height: 23px;
   width: 35px;
   position: absolute;
-  top: 70px;
+  top: 23px;
   left: auto;
   right: 5em;
   z-index: 2;
@@ -249,7 +260,7 @@ Files inside this folder can contain specific element styles and layout.
 }
 
 .page-content {
-  margin-top: 124px;
+  margin-top: 35px;
 }
 .page-content p,
 .page-content ul {
@@ -335,7 +346,15 @@ Files inside this folder can contain specific element styles and layout.
 ============================================================================= */
 .swiper {
   width: 100%;
-  height: 100%;
+  height: auto;
+  overflow: hidden;
+  margin: auto;
+  aspect-ratio: 16/9;
+}
+@media (min-width: 1261px) {
+  .swiper {
+    width: 1200px;
+  }
 }
 
 :root {
@@ -343,8 +362,16 @@ Files inside this folder can contain specific element styles and layout.
 }
 
 .slide-image {
+  width: 100%;
+  height: auto;
   overflow: hidden;
-  height: 90vh;
+  margin: auto;
+  aspect-ratio: 16/9;
+}
+@media (min-width: 1261px) {
+  .slide-image {
+    width: 1200px;
+  }
 }
 .slide-image img {
   width: 100%;
@@ -374,7 +401,15 @@ Files inside this folder can contain specific element styles and layout.
 ============================================================================= */
 .fullimage {
   width: 100%;
+  height: auto;
   overflow: hidden;
+  margin: auto;
+  aspect-ratio: 16/9;
+}
+@media (min-width: 1261px) {
+  .fullimage {
+    width: 1200px;
+  }
 }
 .fullimage img {
   width: 100%;
@@ -389,10 +424,11 @@ Files inside this folder can contain specific element styles and layout.
   background-color: #999999;
   display: flex;
   flex-direction: column;
-  width: 800px;
+  width: 680px;
   margin: auto;
   padding: 3em;
   gap: 2.5em;
+  border-radius: 5px;
 }
 @media (min-width: 1261px) {
   .book-wrapper {
@@ -402,9 +438,10 @@ Files inside this folder can contain specific element styles and layout.
 .book-image {
   width: 50%;
   overflow: hidden;
+  aspect-ratio: 1/1;
 }
 .book-image img {
-  width: 375px;
+  width: 100%;
   height: auto;
 }
 .book-text {
@@ -492,4 +529,140 @@ Files inside this folder can contain specific element styles and layout.
 }
 .spacing-large {
   height: 300px;
+}
+
+/* ==========================================================================
+	@_cover.scss
+	This file is used for styling the cover-block.
+============================================================================= */
+.cover-wrapper {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  margin: auto;
+  aspect-ratio: 16/9;
+}
+@media (min-width: 1261px) {
+  .cover-wrapper {
+    width: 1200px;
+  }
+}
+.cover-image {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  margin: auto;
+  aspect-ratio: 16/9;
+}
+@media (min-width: 1261px) {
+  .cover-image {
+    width: 1200px;
+  }
+}
+.cover-image img {
+  width: 100%;
+  height: auto;
+  opacity: 0.3;
+}
+.cover-box {
+  display: block;
+  width: 1200px;
+  position: relative;
+  bottom: 250px;
+  color: #ffffff;
+  padding: 0 1em;
+}
+.cover-box h1,
+.cover-box h3 {
+  margin: 0;
+}
+
+.b-gray {
+  background-color: #999999;
+}
+.b-green {
+  background-color: #c8d100;
+}
+.b-orange {
+  background-color: #ed7e00;
+}
+.b-blue {
+  background-color: #2eaee0;
+}
+.b-yellow {
+  background-color: #fdca00;
+}
+.b-teal {
+  background-color: #48888a;
+}
+.b-purple {
+  background-color: #b5007b;
+}
+.b-red {
+  background-color: #cc061d;
+}
+
+/* ==========================================================================
+	@_video.scss
+	This file is used for styling the button-block.
+============================================================================= */
+.video-frame {
+  display: block;
+  margin: auto;
+}
+
+/* ==========================================================================
+	@_card.scss
+	This file is used for styling the card-block.
+============================================================================= */
+.card-wrapper {
+  width: 800px;
+  margin: auto;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+.card__container {
+  width: 250px;
+  border-radius: 5px;
+  background-color: #ffffff;
+  box-shadow: 0px 12px 12px rgba(134, 140, 150, 0.13), 0px 29px 40px rgba(134, 140, 150, 0.2);
+}
+.card__container-image {
+  width: 250px;
+  height: 150px;
+  overflow: hidden;
+  border-radius: 5px 5px 0 0;
+}
+.card__container-image img {
+  width: 250px;
+  height: auto;
+}
+
+.team__container {
+  padding: 1em;
+}
+.team__container-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 1em;
+}
+.team__container-info p {
+  font-size: 15px;
+}
+.team__container-name {
+  margin-bottom: 1em;
+}
+.team__container-name .strong-text {
+  font-weight: 600;
+  min-height: 65px;
+}
+.team__container-link {
+  text-align: right;
+}
+.team__container p {
+  width: unset;
+  margin: unset;
 }/*# sourceMappingURL=styles.css.map */

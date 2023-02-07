@@ -57,6 +57,14 @@ h2 {
   }
 }
 
+h3 {
+  font-size: $h3-mobile;
+
+  @include laptop {
+    font-size: $h3;
+  }
+}
+
 p {
   font-size: $p;
 }

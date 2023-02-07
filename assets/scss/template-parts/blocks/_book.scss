@@ -8,10 +8,11 @@
     background-color: $gray;
     display: flex;
     flex-direction: column;
-    width: $content;
+    width: calc($content - 120px);
     margin: auto;
     padding: 3em;
     gap: 2.5em;
+    border-radius: 5px;
 
     @include laptop {
       flex-direction: row;
@@ -21,9 +22,10 @@
   &-image {
     width: 50%;
     overflow: hidden;
+    aspect-ratio: 1/1;
 
     img {
-      width: 375px;
+      width: 100%;
       height: auto;
     }
   }

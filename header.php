@@ -31,7 +31,7 @@
         <div class="header-inner">
             <div class="header__left">
                 <a href="<?php echo get_site_url(); ?>">
-                    <h1>Matheliebe.</h1>
+                    <span>Matheliebe.</span>
                 </a>
             </div>
             <div class="header__right">

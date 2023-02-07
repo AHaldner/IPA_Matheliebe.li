@@ -5,7 +5,14 @@
 
 .swiper {
   width: 100%;
-  height: 100%;
+  height: auto;
+  overflow: hidden;
+  margin: auto;
+  aspect-ratio: 16/9;
+
+  @include laptop {
+    width: $content-wide;
+  }
 }
 
 :root {
@@ -14,8 +21,15 @@
 
 .slide {
   &-image {
+    width: 100%;
+    height: auto;
     overflow: hidden;
-    height: 90vh;
+    margin: auto;
+    aspect-ratio: 16/9;
+
+    @include laptop {
+      width: $content-wide;
+    }
 
     img {
       width: 100%;

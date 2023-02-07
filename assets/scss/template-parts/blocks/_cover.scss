@@ -1,0 +1,84 @@
+/* ==========================================================================
+	@_cover.scss
+	This file is used for styling the cover-block.
+============================================================================= */
+
+.cover {
+  &-wrapper {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    margin: auto;
+    aspect-ratio: 16/9;
+
+    @include laptop {
+      width: $content-wide;
+    }
+  }
+
+  &-image {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    margin: auto;
+    aspect-ratio: 16/9;
+
+    @include laptop {
+      width: $content-wide;
+    }
+
+    & img {
+      width: 100%;
+      height: auto;
+      opacity: 0.3;
+    }
+  }
+
+  &-box {
+    display: block;
+    width: $content-wide;
+    position: relative;
+    bottom: 250px;
+    color: $white;
+    padding: 0 1em;
+
+    h1,
+    h3 {
+      margin: 0;
+    }
+  }
+}
+
+.b {
+  &-gray {
+    background-color: $gray;
+  }
+
+  &-green {
+    background-color: $green;
+  }
+
+  &-orange {
+    background-color: $orange;
+  }
+
+  &-blue {
+    background-color: $blue;
+  }
+
+  &-yellow {
+    background-color: $yellow;
+  }
+
+  &-teal {
+    background-color: $teal;
+  }
+
+  &-purple {
+    background-color: $purple;
+  }
+
+  &-red {
+    background-color: $red;
+  }
+}

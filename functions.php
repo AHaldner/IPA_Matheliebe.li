@@ -16,6 +16,8 @@ function package_css()
 {
     wp_enqueue_style('locomotive-css', 'https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css');
     wp_enqueue_style('swiper-css', 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css');
+    wp_enqueue_style('bootstrap-icons-css', 'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css');
+    wp_enqueue_style('flag-icons-css', 'https://cdn.jsdelivr.net/gh/lipis/flag-icons@6.6.6/css/flag-icons.min.css');
 }
 add_action('wp_enqueue_scripts', 'package_css');
 
@@ -138,6 +140,42 @@ function my_acf_blocks_init()
             'title'             => __('Spacing'),
             'description'       => __('Block für anpassbare Abstände'),
             'render_template'   => 'template-parts/blocks/spacing.php',
+            'category'          => 'theme',
+        ));
+    }
+
+    if (function_exists('acf_register_block_type')) {
+
+        // Register a testimonial block.
+        acf_register_block_type(array(
+            'name'              => 'cover',
+            'title'             => __('Cover'),
+            'description'       => __('Block für das Cover einer Seite'),
+            'render_template'   => 'template-parts/blocks/cover.php',
+            'category'          => 'theme',
+        ));
+    }
+
+    if (function_exists('acf_register_block_type')) {
+
+        // Register a testimonial block.
+        acf_register_block_type(array(
+            'name'              => 'video',
+            'title'             => __('Video'),
+            'description'       => __('Block für ein Vimeo-Video'),
+            'render_template'   => 'template-parts/blocks/video.php',
+            'category'          => 'theme',
+        ));
+    }
+
+    if (function_exists('acf_register_block_type')) {
+
+        // Register a testimonial block.
+        acf_register_block_type(array(
+            'name'              => 'Card',
+            'title'             => __('Card'),
+            'description'       => __('Block für eine Inhalts-Karte'),
+            'render_template'   => 'template-parts/blocks/Card.php',
             'category'          => 'theme',
         ));
     }

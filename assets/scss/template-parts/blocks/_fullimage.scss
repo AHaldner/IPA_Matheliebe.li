@@ -5,7 +5,14 @@
 
 .fullimage {
   width: 100%;
+  height: auto;
   overflow: hidden;
+  margin: auto;
+  aspect-ratio: 16/9;
+
+  @include laptop {
+    width: $content-wide;
+  }
 
   & img {
     width: 100%;
