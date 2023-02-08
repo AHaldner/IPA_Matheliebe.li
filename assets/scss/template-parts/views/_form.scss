@@ -1,0 +1,72 @@
+/* ==========================================================================
+	@_form.scss
+	This file is used for styling forms.
+============================================================================= */
+
+.util-form {
+  width: calc($content / 2);
+  margin: auto;
+  border-radius: 5px;
+  box-shadow: $shadow-200;
+
+  .form {
+    padding: 1em;
+
+    &-field {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25em;
+      margin-bottom: 0.5em;
+
+      label {
+        color: $white;
+      }
+
+      input {
+        border: none;
+        padding: 0.25em;
+        border-radius: 5px;
+      }
+    }
+
+    &-button {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      color: $white;
+      margin-top: 1em;
+
+      input {
+        background: none;
+        border: none;
+        color: $white;
+        cursor: pointer;
+      }
+
+      i {
+        position: relative;
+        top: 2px;
+      }
+    }
+  }
+}
+
+.error {
+  &-box {
+    margin: auto;
+    width: $content;
+    border-radius: 5px;
+    box-shadow: $shadow-200;
+    margin-bottom: 5em;
+    background-color: $red;
+  }
+
+  &-msg {
+    color: $white;
+    padding: 1em;
+  }
+}
+
+.register {
+  background-color: $purple;
+}

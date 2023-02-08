@@ -1,6 +1,21 @@
 .footer {
   background-color: $yellow;
-  display: flex;
-  justify-content: space-between;
   padding: 5em;
+
+  @include laptop {
+    padding: 5em 0;
+  }
+
+  &-inner {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include laptop {
+      flex-direction: row;
+      width: $content-wide;
+      margin: auto;
+    }
+  }
 }

@@ -51,16 +51,18 @@
         <div class="nav-menu-inner">
             <div class="nav-menu-inner-container">
                 <div class="nav-menu-inner-links">
-                    <a href="#section1">Dienstleistungen</a>
-                    <a href="#section2">Angebote</a>
-                    <a href="#section3">Vorgehen</a>
-                    <a href="#section4">Referenzen</a>
-                    <a href="#section5">Team</a>
-                    <a href="#section6">FAQ</a>
-                    <a href="#section7">Kontakt</a>
-                </div>
-                <div class="nav-menu-inner-home">
-                    <a href="<?php echo get_site_url(); ?>">Startseite</a>
+                    <div class="nav-menu-inner-links-topics">
+                        <h3><?php echo 'Themenbereiche' ?></h3>
+                        <?php wp_nav_menu(['theme_location' => 'topics-menu']); ?>
+                    </div>
+                    <div class="nav-menu-inner-links-util">
+                        <h3><?php echo 'Ausstellung' ?></h3>
+                        <?php wp_nav_menu(['theme_location' => 'util-menu']); ?>
+                    </div>
+                    <div class="nav-menu-inner-links-media">
+                        <h3><?php echo 'Medien' ?></h3>
+                        <?php wp_nav_menu(['theme_location' => 'media-menu']); ?>
+                    </div>
                 </div>
             </div>
         </div>

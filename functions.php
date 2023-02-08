@@ -225,7 +225,9 @@ function register_menus()
 {
     register_nav_menus(
         array(
-            'main-menu' => 'Main Menu',
+            'topics-menu' => 'Themen Menu',
+            'util-menu' => 'Ausstellung Menu',
+            'media-menu' => 'Medien Menu',
             'footer-menu' => 'Footer Menu',
         )
     );

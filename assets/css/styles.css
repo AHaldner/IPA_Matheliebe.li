@@ -127,9 +127,25 @@ Files inside this folder can contain specific element styles and layout.
 */
 .footer {
   background-color: #fdca00;
-  display: flex;
-  justify-content: space-between;
   padding: 5em;
+}
+@media (min-width: 1261px) {
+  .footer {
+    padding: 5em 0;
+  }
+}
+.footer-inner {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+@media (min-width: 1261px) {
+  .footer-inner {
+    flex-direction: row;
+    width: 1200px;
+    margin: auto;
+  }
 }
 
 .header {
@@ -138,9 +154,21 @@ Files inside this folder can contain specific element styles and layout.
   position: fixed;
   top: 0;
   width: 100%;
+  height: 50px;
   z-index: 100;
   box-shadow: 0px 12px 12px rgba(134, 140, 150, 0.13), 0px 29px 40px rgba(134, 140, 150, 0.2);
   background-color: #ffffff;
+}
+@media (min-width: 1261px) {
+  .header {
+    padding: 0.5em 0;
+  }
+}
+.header-inner {
+  width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
 }
 .header__left {
   width: 350px;
@@ -149,6 +177,9 @@ Files inside this folder can contain specific element styles and layout.
   margin: 0;
   font-size: 30px;
   font-weight: 600;
+}
+.header__right {
+  width: 35px;
 }
 
 .nav-menu {
@@ -161,13 +192,99 @@ Files inside this folder can contain specific element styles and layout.
   overflow: hidden;
   z-index: 10;
 }
+.nav-menu-inner {
+  margin: auto;
+  width: 100%;
+}
+@media (min-width: 1261px) {
+  .nav-menu-inner {
+    width: 1200px;
+  }
+}
 .nav-menu-inner-links {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   padding: 1em 1em 0 1em;
 }
+@media (min-width: 1261px) {
+  .nav-menu-inner-links {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+.nav-menu-inner-links-topics ul li:nth-child(1) a {
+  color: #c8d100;
+}
+.nav-menu-inner-links-topics ul li:nth-child(1) a::after {
+  content: url("data:image/svg+xml,<svg viewBox='0 0 16 16' fill='rgb(200, 209, 0)' xmlns='http://www.w3.org/2000/svg'><path fill-rule='evenodd' d='M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z'/></svg>");
+}
+.nav-menu-inner-links-topics ul li:nth-child(2) a {
+  color: #ed7e00;
+}
+.nav-menu-inner-links-topics ul li:nth-child(2) a::after {
+  content: url("data:image/svg+xml,<svg viewBox='0 0 16 16' fill='rgb(237, 126, 0)' xmlns='http://www.w3.org/2000/svg'><path fill-rule='evenodd' d='M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z'/></svg>");
+}
+.nav-menu-inner-links-topics ul li:nth-child(3) a {
+  color: #2eaee0;
+}
+.nav-menu-inner-links-topics ul li:nth-child(3) a::after {
+  content: url("data:image/svg+xml,<svg viewBox='0 0 16 16' fill='rgb(46, 174, 224)' xmlns='http://www.w3.org/2000/svg'><path fill-rule='evenodd' d='M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z'/></svg>");
+}
+.nav-menu-inner-links-topics ul li:nth-child(4) a {
+  color: #fdca00;
+}
+.nav-menu-inner-links-topics ul li:nth-child(4) a::after {
+  content: url("data:image/svg+xml,<svg viewBox='0 0 16 16' fill='rgb(253, 202, 0)' xmlns='http://www.w3.org/2000/svg'><path fill-rule='evenodd' d='M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z'/></svg>");
+}
+.nav-menu-inner-links-topics ul li:nth-child(5) a {
+  color: #48888a;
+}
+.nav-menu-inner-links-topics ul li:nth-child(5) a::after {
+  content: url("data:image/svg+xml,<svg viewBox='0 0 16 16' fill='rgb(72, 136, 138)' xmlns='http://www.w3.org/2000/svg'><path fill-rule='evenodd' d='M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z'/></svg>");
+}
+.nav-menu-inner-links-topics ul li:nth-child(6) a {
+  color: #b5007b;
+}
+.nav-menu-inner-links-topics ul li:nth-child(6) a::after {
+  content: url("data:image/svg+xml,<svg viewBox='0 0 16 16' fill='rgb(181, 0, 123)' xmlns='http://www.w3.org/2000/svg'><path fill-rule='evenodd' d='M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z'/></svg>");
+}
+.nav-menu-inner-links-topics ul li:nth-child(7) a {
+  color: #cc061d;
+}
+.nav-menu-inner-links-topics ul li:nth-child(7) a::after {
+  content: url("data:image/svg+xml,<svg viewBox='0 0 16 16' fill='rgb(204, 6, 29)' xmlns='http://www.w3.org/2000/svg'><path fill-rule='evenodd' d='M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z'/></svg>");
+}
+.nav-menu-inner-links div {
+  min-width: 100%;
+}
+@media (min-width: 1261px) {
+  .nav-menu-inner-links div {
+    min-width: 30%;
+  }
+}
+.nav-menu-inner-links ul {
+  list-style: none;
+  padding: 0;
+}
+.nav-menu-inner-links ul li {
+  margin: 0.5em 0;
+}
+.nav-menu-inner-links ul li a {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.nav-menu-inner-links ul li a::after {
+  content: url("data:image/svg+xml,<svg viewBox='0 0 16 16' fill='rgb(153, 153, 153)' xmlns='http://www.w3.org/2000/svg'><path fill-rule='evenodd' d='M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z'/></svg>");
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  position: relative;
+  top: 2px;
+}
 .nav-menu-inner-links a {
-  color: #000000;
+  color: #999999;
 }
 .nav-menu-inner-home {
   display: flex;
@@ -181,7 +298,6 @@ Files inside this folder can contain specific element styles and layout.
   height: 0;
 }
 .nav-menu ul {
-  padding: 1em;
   margin: 0;
 }
 
@@ -204,13 +320,12 @@ Files inside this folder can contain specific element styles and layout.
 }
 
 .navbar-container input[type=checkbox] {
-  position: absolute;
+  position: relative;
   display: block;
   height: 32px;
   width: 30px;
-  top: 16px;
-  left: auto;
-  right: 5em;
+  right: 1px;
+  top: 6px;
   z-index: 5;
   opacity: 0;
 }
@@ -219,10 +334,8 @@ Files inside this folder can contain specific element styles and layout.
   display: block;
   height: 23px;
   width: 35px;
-  position: absolute;
-  top: 23px;
-  left: auto;
-  right: 5em;
+  position: relative;
+  bottom: 24px;
   z-index: 2;
   display: flex;
   flex-direction: column;
@@ -665,4 +778,71 @@ Files inside this folder can contain specific element styles and layout.
 .team__container p {
   width: unset;
   margin: unset;
+}
+
+/* ==========================================================================
+	@__views-dir.scss
+    This file is used to contain all views imports.
+    Files inside this folder should contain all styles relating to views used.
+============================================================================= */
+/* ==========================================================================
+	@_form.scss
+	This file is used for styling forms.
+============================================================================= */
+.util-form {
+  width: 400px;
+  margin: auto;
+  border-radius: 5px;
+  box-shadow: 0px 12px 12px rgba(134, 140, 150, 0.13), 0px 29px 40px rgba(134, 140, 150, 0.2);
+}
+.util-form .form {
+  padding: 1em;
+}
+.util-form .form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25em;
+  margin-bottom: 0.5em;
+}
+.util-form .form-field label {
+  color: #ffffff;
+}
+.util-form .form-field input {
+  border: none;
+  padding: 0.25em;
+  border-radius: 5px;
+}
+.util-form .form-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: #ffffff;
+  margin-top: 1em;
+}
+.util-form .form-button input {
+  background: none;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+}
+.util-form .form-button i {
+  position: relative;
+  top: 2px;
+}
+
+.error-box {
+  margin: auto;
+  width: 800px;
+  border-radius: 5px;
+  box-shadow: 0px 12px 12px rgba(134, 140, 150, 0.13), 0px 29px 40px rgba(134, 140, 150, 0.2);
+  margin-bottom: 5em;
+  background-color: #cc061d;
+}
+.error-msg {
+  color: #ffffff;
+  padding: 1em;
+}
+
+.register {
+  background-color: #b5007b;
 }/*# sourceMappingURL=styles.css.map */
