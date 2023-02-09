@@ -1,10 +1,8 @@
-/**
-  *
-  * File Name: @__template-parts-dir.scss
-  * This file is used to contain all component imports.
-  * Files inside this folder should contain all styles relating to a reusable component.
-  *
-**/
+/* ==========================================================================
+	@__template-parts-dir.scss
+	This file is used to contain all component imports.
+  Files inside this folder should contain all styles relating to a reusable component.
+============================================================================= */
 
 @import 'blocks/__blocks-dir';
 @import 'views/__views-dir';

@@ -175,7 +175,55 @@ function my_acf_blocks_init()
             'name'              => 'Card',
             'title'             => __('Card'),
             'description'       => __('Block für eine Inhalts-Karte'),
-            'render_template'   => 'template-parts/blocks/Card.php',
+            'render_template'   => 'template-parts/blocks/card.php',
+            'category'          => 'theme',
+        ));
+    }
+
+    if (function_exists('acf_register_block_type')) {
+
+        // Register a testimonial block.
+        acf_register_block_type(array(
+            'name'              => 'Icon',
+            'title'             => __('Icon'),
+            'description'       => __('Block für eine Icon-Bar'),
+            'render_template'   => 'template-parts/blocks/iconbar.php',
+            'category'          => 'theme',
+        ));
+    }
+
+    if (function_exists('acf_register_block_type')) {
+
+        // Register a testimonial block.
+        acf_register_block_type(array(
+            'name'              => 'list',
+            'title'             => __('List'),
+            'description'       => __('Block für eine Liste'),
+            'render_template'   => 'template-parts/blocks/list.php',
+            'category'          => 'theme',
+        ));
+    }
+
+    if (function_exists('acf_register_block_type')) {
+
+        // Register a testimonial block.
+        acf_register_block_type(array(
+            'name'              => 'person',
+            'title'             => __('Person'),
+            'description'       => __('Block für eine Personen-Karte'),
+            'render_template'   => 'template-parts/blocks/person.php',
+            'category'          => 'theme',
+        ));
+    }
+
+    if (function_exists('acf_register_block_type')) {
+
+        // Register a testimonial block.
+        acf_register_block_type(array(
+            'name'              => 'logincontent',
+            'title'             => __('Login Content'),
+            'description'       => __('Block für den Login-Inhalt'),
+            'render_template'   => 'template-parts/blocks/logincontent.php',
             'category'          => 'theme',
         ));
     }
@@ -228,8 +276,11 @@ function register_menus()
             'topics-menu' => 'Themen Menu',
             'util-menu' => 'Ausstellung Menu',
             'media-menu' => 'Medien Menu',
+            'language-menu' => 'Sprachen Menu',
             'footer-menu' => 'Footer Menu',
         )
     );
 }
 add_action('init', 'register_menus');
+
+add_filter('show_admin_bar', '__return_false');

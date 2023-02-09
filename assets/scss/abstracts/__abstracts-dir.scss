@@ -1,12 +1,11 @@
-/*
-
-This file is used to contain all abstracts imports.
-Files inside this folder can contain abstract settings, helpers or functions. They have no direct output.
-
-*/
+/* ==========================================================================
+	@__abstracts-dir.scss
+	This file is used to contain all abstracts imports.
+    Files inside this folder can contain abstract settings, helpers or functions. They have no direct output.
+============================================================================= */
 
 // Variables
-@import "variables";
+@import 'variables';
 
 // Mixins
-@import "mixins";
+@import 'mixins';

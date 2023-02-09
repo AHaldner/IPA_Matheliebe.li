@@ -5,7 +5,11 @@
 ============================================================================= */
 
 * {
-  font-size: 20px;
+  font-size: $p-mobile;
+
+  @include tablet {
+    font-size: $p;
+  }
 
   &:focus {
     outline: none;
@@ -66,5 +70,9 @@ h3 {
 }
 
 p {
-  font-size: $p;
+  font-size: $p-mobile;
+
+  @include tablet {
+    font-size: $p;
+  }
 }

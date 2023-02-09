@@ -1,5 +1,5 @@
 /* ==========================================================================
-	@variables.scss
+	@_variables.scss
 	Variablen
 ============================================================================= */
 
@@ -31,10 +31,11 @@ $fontweights: (
 $h1: 80px;
 $h2: 60px;
 $h3: 40px;
+$p: 20px;
 $h1-mobile: 40px;
 $h2-mobile: 30px;
 $h3-mobile: 20px;
-$p: 20px;
+$p-mobile: 15px;
 
 $text-logo: 30px;
 $text-info: 15px;

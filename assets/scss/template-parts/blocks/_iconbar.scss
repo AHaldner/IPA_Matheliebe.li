@@ -1,0 +1,25 @@
+/* ==========================================================================
+	@_iconbar.scss
+	This file is used for styling the icon-bar-block.
+============================================================================= */
+
+.iconbar {
+  &-wrapper {
+    width: 100%;
+    margin: auto;
+
+    @include laptop {
+      width: $content-wide;
+    }
+  }
+
+  &-inner {
+    display: flex;
+    flex-direction: column;
+
+    @include laptop {
+      flex-direction: row;
+      gap: 1em;
+    }
+  }
+}

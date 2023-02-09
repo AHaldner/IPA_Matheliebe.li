@@ -1,6 +1,11 @@
+/* ==========================================================================
+	@_footer.scss
+	This file is used for styling the footer.
+============================================================================= */
+
 .footer {
   background-color: $yellow;
-  padding: 5em;
+  padding: 1em;
 
   @include laptop {
     padding: 5em 0;
@@ -12,8 +17,11 @@
     flex-direction: column;
     justify-content: space-between;
 
-    @include laptop {
+    @include tablet {
       flex-direction: row;
+    }
+
+    @include laptop {
       width: $content-wide;
       margin: auto;
     }

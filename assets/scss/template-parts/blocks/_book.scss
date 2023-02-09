@@ -8,21 +8,28 @@
     background-color: $gray;
     display: flex;
     flex-direction: column;
-    width: calc($content - 120px);
+    width: unset;
     margin: auto;
     padding: 3em;
     gap: 2.5em;
-    border-radius: 5px;
 
-    @include laptop {
+    @include tablet {
       flex-direction: row;
+      width: calc($content - 120px);
+      border-radius: 5px;
     }
   }
 
   &-image {
     width: 50%;
     overflow: hidden;
-    aspect-ratio: 1/1;
+    aspect-ratio: 1/1.3;
+    margin: auto;
+
+    @include tablet {
+      aspect-ratio: 1/1;
+      margin: unset;
+    }
 
     img {
       width: 100%;
@@ -31,7 +38,11 @@
   }
 
   &-text {
-    width: 50%;
+    width: 100%;
+
+    @include tablet {
+      width: 50%;
+    }
 
     p {
       width: unset;

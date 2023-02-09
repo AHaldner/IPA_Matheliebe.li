@@ -36,15 +36,43 @@
 
   &-box {
     display: block;
-    width: $content-wide;
     position: relative;
-    bottom: 250px;
+    bottom: 100px;
     color: $white;
     padding: 0 1em;
 
-    h1,
-    h3 {
+    @include tablet {
+      bottom: 150px;
+    }
+
+    @include laptop {
+      bottom: 250px;
+    }
+
+    h1 {
+      font-size: $h2-mobile;
       margin: 0;
+
+      @include tablet {
+        font-size: $h1-mobile;
+      }
+
+      @include laptop {
+        font-size: $h1;
+      }
+    }
+
+    h3 {
+      font-size: $p-mobile;
+      margin: 0;
+
+      @include tablet {
+        font-size: $h3-mobile;
+      }
+
+      @include laptop {
+        font-size: $h3;
+      }
     }
   }
 }

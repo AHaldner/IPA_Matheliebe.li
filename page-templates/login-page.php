@@ -9,10 +9,8 @@ get_header(); ?>
     <div class="spacing-large"></div>
     <?php
     if (is_user_logged_in()) {
-
         echo '<p>Welcome. You are logged in!</p>';
     } else {
-
         wp_login_form(
 
             array(

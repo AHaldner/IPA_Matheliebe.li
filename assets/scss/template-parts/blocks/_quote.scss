@@ -4,14 +4,23 @@
 ============================================================================= */
 
 .quote {
-  max-width: 100%;
-  margin: auto;
+  width: unset;
+  margin: 1em;
 
-  @include laptop {
+  @include tablet {
     width: $content;
+    margin: auto;
   }
 
   &-text {
     font-weight: 600;
+  }
+
+  .quote-person {
+    margin: 1em 0;
+
+    @include tablet {
+      margin: 1em auto;
+    }
   }
 }

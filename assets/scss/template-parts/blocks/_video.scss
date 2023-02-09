@@ -6,4 +6,10 @@
 .video-frame {
   display: block;
   margin: auto;
+  aspect-ratio: 16/9;
+  width: 100%;
+
+  @include tablet {
+    width: 800px;
+  }
 }

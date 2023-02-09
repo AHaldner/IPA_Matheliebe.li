@@ -11,21 +11,38 @@
     display: block;
     font-size: 20px;
     text-decoration: none;
-    margin: 1em auto;
+    margin: 1em;
+
+    @include tablet {
+      margin: 1em auto;
+    }
   }
 
   svg {
     float: right;
     position: relative;
+    bottom: 4px;
+
+    @include tablet {
+      bottom: unset;
+    }
   }
 }
 
 .large {
-  width: 800px;
+  width: unset;
+
+  @include tablet {
+    width: 800px;
+  }
 }
 
 .small {
-  width: 400px;
+  width: unset;
+
+  @include tablet {
+    width: 400px;
+  }
 }
 
 .m {

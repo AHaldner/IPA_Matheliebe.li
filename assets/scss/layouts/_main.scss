@@ -1,9 +1,23 @@
+/* ==========================================================================
+	@_main.scss
+	This file is used for styling the main box.
+============================================================================= */
+
 .page-content {
-  margin-top: 35px;
+  margin-top: 65px;
+
+  .has-text-align-center {
+    margin: 0;
+  }
 
   p,
   ul {
-    width: $content;
-    margin: 1em auto;
+    width: unset;
+    margin: 1em;
+
+    @include tablet {
+      width: $content;
+      margin: 1em auto;
+    }
   }
 }

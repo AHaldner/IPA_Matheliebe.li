@@ -33,6 +33,7 @@
                 <a href="<?php echo get_site_url(); ?>">
                     <span>Matheliebe.</span>
                 </a>
+                <?php wp_nav_menu(['theme_location' => 'language-menu']); ?>
             </div>
             <div class="header__right">
                 <nav class="navbar">
