@@ -14,7 +14,7 @@
 <head>
     <meta charset="<?php bloginfo('charset'); ?>" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title><?php bloginfo('name'); ?></title>
+    <title><?php wp_title(' | ', 'echo', 'right'); ?><?php bloginfo('name'); ?></title>
     <meta name="description" content="
     <?php if (is_single()) {
         single_post_title('', true);
@@ -26,11 +26,63 @@
     <?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?> data-barba="wrapper">
+<body <?php body_class(); ?>>
+    <script src="https://cdn.websitepolicies.io/lib/cookieconsent/cookieconsent.min.js" defer></script>
+    <?php if (get_locale() == 'de_CH') { ?>
+        <script>
+            window.addEventListener("load", function() {
+                window.wpcc.init({
+                    "corners": "small",
+                    "colors": {
+                        "popup": {
+                            "background": "#FDCA00",
+                            "text": "#000000",
+                            "border": "#555555"
+                        },
+                        "button": {
+                            "background": "#999999",
+                            "text": "#ffffff"
+                        }
+                    },
+                    "position": "bottom-right",
+                    "content": {
+                        "href": "http://localhost/matheliebe/datenschutzerklaerung/",
+                        "message": "Diese Website verwendet Cookies, um Ihnen die bestmögliche Nutzung unserer Website zu ermöglichen.",
+                        "link": "Mehr erfahren",
+                        "button": "Verstanden"
+                    }
+                })
+            });
+        </script>
+    <?php } else { ?>
+        <script>
+            window.addEventListener("load", function() {
+                window.wpcc.init({
+                    "corners": "small",
+                    "colors": {
+                        "popup": {
+                            "background": "#FDCA00",
+                            "text": "#000000",
+                            "border": "#555555"
+                        },
+                        "button": {
+                            "background": "#999999",
+                            "text": "#ffffff"
+                        }
+                    },
+                    "position": "bottom-right",
+                    "content": {
+                        "href": "http://localhost/matheliebe/privacy-policy/",
+                        "button": "Got it"
+                    }
+                })
+            });
+        </script>
+    <?php } ?>
     <header class="header">
         <div class="header-inner">
             <div class="header__left">
-                <a href="<?php echo get_site_url(); ?>">
+                <a href="<?php echo get_home_url(); ?>">
                     <span>Matheliebe.</span>
                 </a>
                 <?php wp_nav_menu(['theme_location' => 'language-menu']); ?>
@@ -53,15 +105,15 @@
             <div class="nav-menu-inner-container">
                 <div class="nav-menu-inner-links">
                     <div class="nav-menu-inner-links-topics">
-                        <h3><?php echo 'Themenbereiche' ?></h3>
+                        <h3><?php pll_e('Themenbereiche'); ?></h3>
                         <?php wp_nav_menu(['theme_location' => 'topics-menu']); ?>
                     </div>
                     <div class="nav-menu-inner-links-util">
-                        <h3><?php echo 'Ausstellung' ?></h3>
+                        <h3><?php pll_e('Ausstellung'); ?></h3>
                         <?php wp_nav_menu(['theme_location' => 'util-menu']); ?>
                     </div>
                     <div class="nav-menu-inner-links-media">
-                        <h3><?php echo 'Medien' ?></h3>
+                        <h3><?php pll_e('Medien'); ?></h3>
                         <?php wp_nav_menu(['theme_location' => 'media-menu']); ?>
                     </div>
                 </div>
@@ -91,4 +143,4 @@
             nav.classList.add('nav-menu-closed');
         }
     </script>
-    <div id="barba-container" data-barba="container" data-barba-namespace="<?php echo get_current_template() ?>">
+    <div class="scroll" data-scroll-container>

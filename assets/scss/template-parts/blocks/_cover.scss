@@ -50,7 +50,7 @@
     }
 
     h1 {
-      font-size: $h2-mobile;
+      font-size: $h3-mobile;
       margin: 0;
 
       @include tablet {
@@ -58,7 +58,7 @@
       }
 
       @include laptop {
-        font-size: $h1;
+        font-size: calc($h1 - 10px);
       }
     }
 

@@ -1,0 +1,16 @@
+/* ==========================================================================
+	@_form.scss
+	This file is used for styling the 404-Page.
+============================================================================= */
+
+.error {
+  &-img {
+    display: block;
+    width: 150px;
+    margin: 0 auto 3em auto;
+
+    @include tablet {
+      width: 300px;
+    }
+  }
+}

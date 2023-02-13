@@ -14,7 +14,7 @@
  **/
 function package_css()
 {
-    wp_enqueue_style('locomotive-css', 'https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css');
+    // wp_enqueue_style('locomotive-css', 'https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css');
     wp_enqueue_style('swiper-css', 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css');
     wp_enqueue_style('bootstrap-icons-css', 'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css');
     wp_enqueue_style('flag-icons-css', 'https://cdn.jsdelivr.net/gh/lipis/flag-icons@6.6.6/css/flag-icons.min.css');
@@ -32,16 +32,17 @@ add_action('wp_enqueue_scripts', 'main_css');
  **/
 function package_scripts()
 {
-    wp_enqueue_script('barba-js', 'https://unpkg.com/@barba/core');
-    wp_enqueue_script('gsap-js', 'https://unpkg.com/gsap@latest/dist/gsap.min.js');
-    wp_enqueue_script('locomotive-js', 'https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js', array(), null, true);
+    // wp_enqueue_script('barba-js', 'https://unpkg.com/@barba/core');
+    // wp_enqueue_script('gsap-js', 'https://unpkg.com/gsap@latest/dist/gsap.min.js');
+    // wp_enqueue_script('locomotive-js', 'https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js', array(), null, true);
     wp_enqueue_script('swiper-js', 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js');
 }
 add_action('wp_enqueue_scripts', 'package_scripts');
 
 function main_scripts()
 {
-    wp_enqueue_script('theme-script', get_template_directory_uri() . '/assets/js/barba-init.js', array(), null, true);
+    // wp_enqueue_script('barba-script', get_template_directory_uri() . '/assets/js/barba-init.js', array(), null, true);
+    // wp_enqueue_script('locomotive-script', get_template_directory_uri() . '/assets/js/locomotive-init.js', array(), null, true);
     wp_enqueue_script('accordion-script', get_template_directory_uri() . '/assets/js/accordion.js', array(), null, true);
 }
 add_action('wp_enqueue_scripts', 'main_scripts');

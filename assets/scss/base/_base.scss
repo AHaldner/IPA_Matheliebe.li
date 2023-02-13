@@ -24,6 +24,13 @@ body {
   background-color: var(--wp--preset--color--white);
 }
 
+:target::before {
+  content: '';
+  display: block;
+  height: 100px; /* fixed header height*/
+  margin: -100px 0 0; /* negative fixed header height */
+}
+
 // Anchor Links
 a {
   color: var(--wp--preset--color--primary);

@@ -8,6 +8,11 @@
  * @return void
  */
 ?>
+<style>
+    .accordion>dt a::after {
+        background-image: url('<?php echo get_site_url(); ?>/wp-content/uploads/2023/02/chevron-down1.svg');
+    }
+</style>
 <dl class='accordion'>
     <?php while (have_rows('accordion')) :
         the_row(); ?>

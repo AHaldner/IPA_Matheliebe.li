@@ -4,10 +4,15 @@
 ============================================================================= */
 
 .util-form {
-  width: calc($content / 2);
+  width: unset;
   margin: auto;
-  border-radius: 5px;
+  border-radius: unset;
   box-shadow: $shadow-200;
+
+  @include tablet {
+    width: calc($content / 2);
+    border-radius: 5px;
+  }
 
   .form {
     padding: 1em;
@@ -30,22 +35,19 @@
     }
 
     &-button {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      color: $white;
-      margin-top: 1em;
-
       input {
-        background: none;
         border: none;
-        color: $white;
+        padding: 0.25em;
+        border-radius: 5px;
+        width: 100%;
+        margin-top: 2em;
+        background-color: $white;
         cursor: pointer;
-      }
+        transition: opacity 0.25s ease-in-out;
 
-      i {
-        position: relative;
-        top: 2px;
+        &:hover {
+          opacity: 0.8;
+        }
       }
     }
   }
@@ -69,4 +71,68 @@
 
 .register {
   background-color: $purple;
+}
+
+#login-form {
+  width: unset;
+  margin: auto;
+  border-radius: unset;
+  box-shadow: $shadow-200;
+  color: $white;
+  background-color: $teal;
+  padding: 1em;
+
+  @include tablet {
+    width: calc(($content / 2) - 40px);
+    border-radius: 5px;
+  }
+
+  p {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25em;
+    width: unset;
+    margin: unset;
+    margin-bottom: 0.5em;
+  }
+
+  input {
+    border: none;
+    padding: 0.25em;
+    border-radius: 5px;
+  }
+
+  #rememberme {
+    position: relative;
+    bottom: 2px;
+  }
+
+  .login-submit {
+    input {
+      border: none;
+      padding: 0.25em;
+      border-radius: 5px;
+      width: 100%;
+      margin-top: 2em;
+      background-color: $white;
+      cursor: pointer;
+      transition: opacity 0.25s ease-in-out;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+}
+
+.page-content .register-text {
+  width: unset;
+
+  @include tablet {
+    width: calc($content / 2);
+  }
+
+  a {
+    text-decoration: underline;
+  }
 }

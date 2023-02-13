@@ -75,6 +75,13 @@ body {
   background-color: var(--wp--preset--color--white);
 }
 
+:target::before {
+  content: "";
+  display: block;
+  height: 100px; /* fixed header height*/
+  margin: -100px 0 0; /* negative fixed header height */
+}
+
 a {
   color: var(--wp--preset--color--primary);
   text-decoration: unset;
@@ -213,8 +220,11 @@ p {
   }
 }
 .header__left ul {
+  margin: 0;
+}
+.header__left ul a {
   position: relative;
-  top: 3px;
+  top: 4px;
   width: 85px;
   margin: 0;
   background-color: #999999;
@@ -222,13 +232,14 @@ p {
   padding: 5px;
   border-radius: 5px;
   display: none;
+  text-align: center;
 }
 @media (min-width: 1261px) {
-  .header__left ul {
+  .header__left ul a {
     display: block;
   }
 }
-.header__left ul li {
+.header__left ul a li {
   text-align: center;
 }
 .header__right {
@@ -706,13 +717,17 @@ p {
   content: "";
   position: absolute;
   right: 20px;
-  top: 20px;
+  top: 15px;
   height: 16px;
   width: 16px;
   transition: 0.6s transform;
-  background-image: url("http://localhost/matheliebe/wp-content/uploads/2023/02/chevron-down1.svg");
   background-repeat: no-repeat;
   fill: #000000;
+}
+@media (min-width: 992px) {
+  .accordion > dt a::after {
+    top: 20px;
+  }
 }
 
 .accordion > dt.accordion-body-show a::after {
@@ -749,11 +764,25 @@ p {
     padding-right: 0;
   }
 }
+.accordion-heading {
+  width: 85%;
+}
 
 .accordion a {
   text-decoration: none;
   color: #000000;
   font-weight: 700;
+}
+
+.accordion p {
+  width: unset;
+  margin: 1em 0;
+}
+@media (min-width: 992px) {
+  .accordion p {
+    width: unset;
+    margin: 1em 0;
+  }
 }
 
 /* ==========================================================================
@@ -836,7 +865,7 @@ p {
   }
 }
 .cover-box h1 {
-  font-size: 30px;
+  font-size: 20px;
   margin: 0;
 }
 @media (min-width: 992px) {
@@ -846,7 +875,7 @@ p {
 }
 @media (min-width: 1261px) {
   .cover-box h1 {
-    font-size: 80px;
+    font-size: 70px;
   }
 }
 .cover-box h3 {
@@ -910,12 +939,18 @@ p {
 	This file is used for styling the card-block.
 ============================================================================= */
 .card-wrapper {
-  width: 800px;
-  margin: auto;
+  width: unset;
+  margin: 0 1em;
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
   gap: 25px;
+}
+@media (min-width: 1261px) {
+  .card-wrapper {
+    width: 800px;
+    margin: auto;
+  }
 }
 .card__container {
   width: 250px;
@@ -976,12 +1011,15 @@ p {
 }
 .iconbar-inner {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 1em;
 }
 @media (min-width: 1261px) {
   .iconbar-inner {
-    flex-direction: row;
+    justify-content: unset;
     gap: 1em;
+    margin: unset;
   }
 }
 
@@ -990,12 +1028,13 @@ p {
 	This file is used for styling the icon-bar-block.
 ============================================================================= */
 .list-wrapper {
-  width: 100%;
-  margin: auto;
+  width: unset;
+  margin: 0 1em;
 }
 @media (min-width: 1261px) {
   .list-wrapper {
     width: 800px;
+    margin: auto;
   }
 }
 .list-item {
@@ -1017,12 +1056,18 @@ p {
 	This file is used for styling the person-card-block.
 ============================================================================= */
 .person-wrapper {
-  width: 800px;
-  margin: auto;
+  width: unset;
+  margin: 0 1em;
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
   gap: 25px;
+}
+@media (min-width: 1261px) {
+  .person-wrapper {
+    width: 800px;
+    margin: auto;
+  }
 }
 .person__container {
   width: 250px;
@@ -1065,10 +1110,16 @@ p {
 	This file is used for styling forms.
 ============================================================================= */
 .util-form {
-  width: 400px;
+  width: unset;
   margin: auto;
-  border-radius: 5px;
+  border-radius: unset;
   box-shadow: 0px 12px 12px rgba(134, 140, 150, 0.13), 0px 29px 40px rgba(134, 140, 150, 0.2);
+}
+@media (min-width: 992px) {
+  .util-form {
+    width: 400px;
+    border-radius: 5px;
+  }
 }
 .util-form .form {
   padding: 1em;
@@ -1087,22 +1138,18 @@ p {
   padding: 0.25em;
   border-radius: 5px;
 }
-.util-form .form-button {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  color: #ffffff;
-  margin-top: 1em;
-}
 .util-form .form-button input {
-  background: none;
   border: none;
-  color: #ffffff;
+  padding: 0.25em;
+  border-radius: 5px;
+  width: 100%;
+  margin-top: 2em;
+  background-color: #ffffff;
   cursor: pointer;
+  transition: opacity 0.25s ease-in-out;
 }
-.util-form .form-button i {
-  position: relative;
-  top: 2px;
+.util-form .form-button input:hover {
+  opacity: 0.8;
 }
 
 .error-box {
@@ -1120,4 +1167,77 @@ p {
 
 .register {
   background-color: #b5007b;
+}
+
+#login-form {
+  width: unset;
+  margin: auto;
+  border-radius: unset;
+  box-shadow: 0px 12px 12px rgba(134, 140, 150, 0.13), 0px 29px 40px rgba(134, 140, 150, 0.2);
+  color: #ffffff;
+  background-color: #48888a;
+  padding: 1em;
+}
+@media (min-width: 992px) {
+  #login-form {
+    width: 360px;
+    border-radius: 5px;
+  }
+}
+#login-form p {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25em;
+  width: unset;
+  margin: unset;
+  margin-bottom: 0.5em;
+}
+#login-form input {
+  border: none;
+  padding: 0.25em;
+  border-radius: 5px;
+}
+#login-form #rememberme {
+  position: relative;
+  bottom: 2px;
+}
+#login-form .login-submit input {
+  border: none;
+  padding: 0.25em;
+  border-radius: 5px;
+  width: 100%;
+  margin-top: 2em;
+  background-color: #ffffff;
+  cursor: pointer;
+  transition: opacity 0.25s ease-in-out;
+}
+#login-form .login-submit input:hover {
+  opacity: 0.8;
+}
+
+.page-content .register-text {
+  width: unset;
+}
+@media (min-width: 992px) {
+  .page-content .register-text {
+    width: 400px;
+  }
+}
+.page-content .register-text a {
+  text-decoration: underline;
+}
+
+/* ==========================================================================
+	@_form.scss
+	This file is used for styling the 404-Page.
+============================================================================= */
+.error-img {
+  display: block;
+  width: 150px;
+  margin: 0 auto 3em auto;
+}
+@media (min-width: 992px) {
+  .error-img {
+    width: 300px;
+  }
 }/*# sourceMappingURL=styles.css.map */

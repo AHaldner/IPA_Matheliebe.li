@@ -15,11 +15,14 @@
 
   &-inner {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 1em;
 
     @include laptop {
-      flex-direction: row;
+      justify-content: unset;
       gap: 1em;
+      margin: unset;
     }
   }
 }

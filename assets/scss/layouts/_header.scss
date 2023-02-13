@@ -47,22 +47,27 @@
     }
 
     ul {
-      position: relative;
-      top: 3px;
-      width: 85px;
       margin: 0;
-      background-color: $gray;
-      color: $white;
-      padding: 5px;
-      border-radius: 5px;
-      display: none;
 
-      @include laptop {
-        display: block;
-      }
-
-      li {
+      a {
+        position: relative;
+        top: 4px;
+        width: 85px;
+        margin: 0;
+        background-color: $gray;
+        color: $white;
+        padding: 5px;
+        border-radius: 5px;
+        display: none;
         text-align: center;
+
+        @include laptop {
+          display: block;
+        }
+
+        li {
+          text-align: center;
+        }
       }
     }
   }

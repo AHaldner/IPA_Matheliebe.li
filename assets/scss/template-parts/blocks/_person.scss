@@ -4,12 +4,17 @@
 ============================================================================= */
 .person {
   &-wrapper {
-    width: $content;
-    margin: auto;
+    width: unset;
+    margin: 0 1em;
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
     gap: 25px;
+
+    @include laptop {
+      width: $content;
+      margin: auto;
+    }
   }
 
   &__container {
