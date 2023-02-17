@@ -46,7 +46,7 @@
                     },
                     "position": "bottom-right",
                     "content": {
-                        "href": "http://localhost/matheliebe/datenschutzerklaerung/",
+                        "href": "https://matheliebe.194-56-189-125.plesk.page/datenschutzerklaerung/",
                         "message": "Diese Website verwendet Cookies, um Ihnen die bestmögliche Nutzung unserer Website zu ermöglichen.",
                         "link": "Mehr erfahren",
                         "button": "Verstanden"
@@ -72,7 +72,7 @@
                     },
                     "position": "bottom-right",
                     "content": {
-                        "href": "http://localhost/matheliebe/privacy-policy/",
+                        "href": "https://matheliebe.194-56-189-125.plesk.page/en/privacy-policy/",
                         "button": "Got it"
                     }
                 })
@@ -103,9 +103,12 @@
     <div class="nav-menu nav-menu-closed">
         <div class="nav-menu-inner">
             <div class="nav-menu-inner-container">
+                <div class="nav-lang-switcher">
+                    <?php wp_nav_menu(['theme_location' => 'language-menu']); ?>
+                </div>
                 <div class="nav-menu-inner-links">
                     <div class="nav-menu-inner-links-topics">
-                        <h3><?php pll_e('Themenbereiche'); ?></h3>
+                        <h3 class="first-title"><?php pll_e('Themenbereiche'); ?></h3>
                         <?php wp_nav_menu(['theme_location' => 'topics-menu']); ?>
                     </div>
                     <div class="nav-menu-inner-links-util">
@@ -143,4 +146,3 @@
             nav.classList.add('nav-menu-closed');
         }
     </script>
-    <div class="scroll" data-scroll-container>

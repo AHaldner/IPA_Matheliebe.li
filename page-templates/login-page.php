@@ -14,9 +14,15 @@ get_header(); ?>
 
     if (is_user_logged_in()) {
         if (get_locale() == 'de_CH') {
-            echo '<p>Willkommen ' . $current_user->display_name . "\n </p>";
+            echo '<p>Willkommen ' . $current_user->display_name . "\n </p>"; ?>
+            <p><a class="underline-link" href="<?php echo wp_logout_url(home_url()); ?>">Abmelden</a></p>
+            <p><a class="underline-link" href="<?php echo get_site_url() . '/fuer-leihnehmer'; ?>">Zu der Leihnehmer-Seite</a></p>
+        <?php
         } else {
-            echo '<p>Welcome ' . $current_user->display_name . "\n </p>";
+            echo '<p>Welcome ' . $current_user->display_name . "\n </p>"; ?>
+            <p><a class="underline-link" href="<?php echo wp_logout_url(home_url()); ?>">Log out</a></p>
+            <p><a class="underline-link" href="<?php echo get_site_url() . '/en/for-borrowers'; ?>">To the Borrower-Page</a></p>
+    <?php
         }
     } else {
         if (get_locale() == 'de_CH') {

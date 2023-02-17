@@ -135,6 +135,23 @@ p {
   }
 }
 
+.underline-link {
+  text-decoration: underline;
+}
+
+/* ==========================================================================
+	@__components-dir.scss
+	This file is used to contain all components imports.
+	Files inside this folder can contain global styles used in the project.
+============================================================================= */
+/* ==========================================================================
+	@_cookie.scss
+	This file is used for styling the cookie-banner.
+============================================================================= */
+.wpcc-container {
+  box-shadow: 0px 12px 12px rgba(134, 140, 150, 0.13), 0px 29px 40px rgba(134, 140, 150, 0.2);
+}
+
 /* ==========================================================================
 	@__layouts-dir.scss
     This file is used to contain all layouts imports.
@@ -246,6 +263,28 @@ p {
   width: 35px;
 }
 
+.nav-lang-switcher {
+  display: unset;
+  margin: 1em;
+}
+@media (min-width: 1261px) {
+  .nav-lang-switcher {
+    display: none;
+  }
+}
+.nav-lang-switcher a {
+  font-size: 20px;
+  margin-left: 15px;
+  padding: 0.5em;
+  border-radius: 5px;
+  color: #ffffff;
+  background-color: #999999;
+}
+@media (min-width: 992px) {
+  .nav-lang-switcher a {
+    margin-left: 20px;
+  }
+}
 .nav-menu {
   position: fixed;
   width: 100%;
@@ -271,16 +310,43 @@ p {
     width: 1200px;
   }
 }
+.nav-menu-inner h3 {
+  font-size: 30px;
+  margin: 1em 0 0.25em 0;
+}
+@media (min-width: 1261px) {
+  .nav-menu-inner h3 {
+    font-size: 40px;
+    margin: 1em 0;
+  }
+}
+.nav-menu-inner .first-title {
+  margin: 0 0 0.25em 0;
+}
+@media (min-width: 1261px) {
+  .nav-menu-inner .first-title {
+    margin: 1em 0;
+  }
+}
 .nav-menu-inner-links {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  padding: 1em 1em 0 1em;
+  padding: 1em 1em 7em 1em;
 }
 @media (min-width: 1261px) {
   .nav-menu-inner-links {
     flex-direction: row;
     justify-content: space-between;
+    padding: 1em;
+  }
+}
+.nav-menu-inner-links a {
+  font-size: 18px;
+}
+@media (min-width: 1261px) {
+  .nav-menu-inner-links a {
+    font-size: inherit;
   }
 }
 .nav-menu-inner-links-topics ul li:nth-child(1) a {
@@ -664,17 +730,18 @@ p {
   width: unset;
   margin: auto;
   padding: 3em;
-  gap: 2.5em;
+  gap: 1em;
 }
 @media (min-width: 992px) {
   .book-wrapper {
     flex-direction: row;
     width: 680px;
     border-radius: 5px;
+    gap: 2.5em;
   }
 }
 .book-image {
-  width: 50%;
+  width: 200px;
   overflow: hidden;
   aspect-ratio: 1/1.3;
   margin: auto;
@@ -683,6 +750,7 @@ p {
   .book-image {
     aspect-ratio: 1/1;
     margin: unset;
+    width: 50%;
   }
 }
 .book-image img {
@@ -875,7 +943,7 @@ p {
 }
 @media (min-width: 1261px) {
   .cover-box h1 {
-    font-size: 70px;
+    font-size: 65px;
   }
 }
 .cover-box h3 {
@@ -1147,6 +1215,7 @@ p {
   background-color: #ffffff;
   cursor: pointer;
   transition: opacity 0.25s ease-in-out;
+  color: #000000;
 }
 .util-form .form-button input:hover {
   opacity: 0.8;
@@ -1154,11 +1223,16 @@ p {
 
 .error-box {
   margin: auto;
-  width: 800px;
-  border-radius: 5px;
+  width: unset;
   box-shadow: 0px 12px 12px rgba(134, 140, 150, 0.13), 0px 29px 40px rgba(134, 140, 150, 0.2);
   margin-bottom: 5em;
   background-color: #cc061d;
+}
+@media (min-width: 992px) {
+  .error-box {
+    width: 800px;
+    border-radius: 5px;
+  }
 }
 .error-msg {
   color: #ffffff;
@@ -1210,6 +1284,7 @@ p {
   background-color: #ffffff;
   cursor: pointer;
   transition: opacity 0.25s ease-in-out;
+  color: #000000;
 }
 #login-form .login-submit input:hover {
   opacity: 0.8;
@@ -1240,4 +1315,77 @@ p {
   .error-img {
     width: 300px;
   }
+}
+
+/* ==========================================================================
+	@_login.scss
+	This file is used for styling login-related elements.
+============================================================================= */
+.login-content-wrapper {
+  width: unset;
+  margin: auto;
+  border-radius: unset;
+  box-shadow: 0px 12px 12px rgba(134, 140, 150, 0.13), 0px 29px 40px rgba(134, 140, 150, 0.2);
+  background-color: #999999;
+  padding: 1em;
+}
+@media (min-width: 992px) {
+  .login-content-wrapper {
+    width: 760px;
+    border-radius: 5px;
+  }
+}
+.login-content-wrapper .wpcf7-form p {
+  display: flex;
+  flex-direction: column;
+  width: unset;
+  margin: unset;
+  margin: 0 auto 0.5em auto;
+  color: #ffffff;
+}
+.login-content-wrapper .wpcf7-form input {
+  border: none;
+  padding: 0.25em;
+  margin-top: 3.75px;
+  border-radius: 5px;
+  width: calc(100% - 10px);
+}
+@media (min-width: 992px) {
+  .login-content-wrapper .wpcf7-form input {
+    margin-top: 5px;
+  }
+}
+.login-content-wrapper .wpcf7-form textarea {
+  border: none;
+  padding: 0.25em;
+  margin-top: 3.75px;
+  border-radius: 5px;
+  width: calc(100% - 10px);
+  resize: none;
+}
+@media (min-width: 992px) {
+  .login-content-wrapper .wpcf7-form textarea {
+    margin-top: 5px;
+  }
+}
+.login-content-wrapper .wpcf7-form .wpcf7-submit {
+  margin-top: 2em;
+  border: none;
+  padding: 0.25em;
+  border-radius: 5px;
+  width: 100%;
+  margin-top: 2em;
+  background-color: #ffffff;
+  cursor: pointer;
+  transition: opacity 0.25s ease-in-out;
+  color: #000000;
+}
+.login-content-wrapper .wpcf7-form .wpcf7-submit:hover {
+  opacity: 0.8;
+}
+.login-content-wrapper .wpcf7-form .wpcf7-spinner {
+  display: none;
+}
+.login-content-wrapper .wpcf7-form .wpcf7-response-output {
+  color: #ffffff;
 }/*# sourceMappingURL=styles.css.map */

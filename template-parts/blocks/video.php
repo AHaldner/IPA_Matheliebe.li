@@ -8,4 +8,6 @@
  * @return void
  */
 ?>
-<iframe class="video-frame" src="<?php the_field('video-link'); ?>" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+<?php if (get_field('video-link')) { ?>
+    <iframe class="video-frame" src="<?php the_field('video-link'); ?>" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+<?php } ?>

@@ -20,7 +20,6 @@
         </div>
     </div>
 </footer>
-</div>
 <section id="wp-footer">
     <?php wp_footer(); ?>
 </section>

@@ -3,19 +3,18 @@ function toggleAccordion(e) {
   const accHeader = e.currentTarget.parentNode;
   const accBody = e.currentTarget.parentNode.nextElementSibling;
   const accShowClass = 'accordion-body-show';
-  // figure out if we are closing an open panel
+  // Do we open or close a panel
   let closeAccordion = false;
   if (accHeader.classList.contains(accShowClass)) {
     closeAccordion = true;
   }
   for (let i = 0; i < accordion.childNodes.length; i++) {
     if (accordion.childNodes[i].classList) {
-      // remove the max-height from any open accordion body
+      // Remove max-height
       if (accordion.childNodes[i].nodeName === 'DD') {
         accordion.childNodes[i].style.maxHeight = null;
       }
-      // remove the open body class from anything in this accordion that might already be open
-      // if there is an aria-expanded attribute, set to false
+      // Remove open class form any open element
       if (accordion.childNodes[i].nodeName === 'DT') {
         accordion.childNodes[i].classList.remove(accShowClass);
         accordion.childNodes[i].firstChild.nextElementSibling.setAttribute(
@@ -25,8 +24,7 @@ function toggleAccordion(e) {
       }
     }
   }
-  // add the open body class to the header
-  // don't re-open this panel if we just closed it
+  // Add open class, don't re-open if it was just closed
   if (!closeAccordion) {
     accHeader.classList.add(accShowClass);
     e.currentTarget.setAttribute('aria-expanded', 'true');
@@ -36,7 +34,7 @@ function toggleAccordion(e) {
   e.preventDefault();
 }
 
-// listen for panel clicks
+// Listen for Clicks
 const panels = document.querySelectorAll('.accordion dt a');
 for (let i = 0; i < panels.length; i++) {
   panels[i].addEventListener('click', toggleAccordion);

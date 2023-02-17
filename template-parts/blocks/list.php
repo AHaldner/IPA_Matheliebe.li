@@ -13,8 +13,10 @@
         <?php while (have_rows('list')) :
             the_row(); ?>
             <div class="list-item">
-                <p><?php the_sub_field('list-text'); ?></p>
-                <p class="list-item-strong"><?php the_sub_field('list-number'); ?></p>
+                <?php if (get_sub_field('list-text') && get_sub_field('list-number')) { ?>
+                    <p><?php the_sub_field('list-text'); ?></p>
+                    <p class="list-item-strong"><?php the_sub_field('list-number'); ?></p>
+                <?php } ?>
             </div>
         <?php
         endwhile; ?>

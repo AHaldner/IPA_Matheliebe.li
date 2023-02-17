@@ -10,10 +10,14 @@
 ?>
 <div class="cover-wrapper">
     <div class="cover-image b-<?php the_field('covercolor'); ?>">
-        <img src="<?php the_field('coverimage'); ?>" alt="bild" />
+        <?php if (get_field('coverimage')) { ?>
+            <img src="<?php the_field('coverimage'); ?>" alt="bild" />
+        <?php } ?>
     </div>
     <div class="cover-box">
-        <h1><?php the_field('covertitle'); ?></h1>
-        <h3><?php the_field('covertext'); ?></h3>
+        <?php if (get_field('covertitle') && get_field('covertext')) { ?>
+            <h1><?php the_field('covertitle'); ?></h1>
+            <h3><?php the_field('covertext'); ?></h3>
+        <?php } ?>
     </div>
 </div>

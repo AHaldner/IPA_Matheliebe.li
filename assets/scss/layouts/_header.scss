@@ -78,6 +78,28 @@
 }
 
 .nav {
+  &-lang-switcher {
+    display: unset;
+    margin: 1em;
+
+    @include laptop {
+      display: none;
+    }
+
+    a {
+      font-size: $p;
+      margin-left: $p-mobile;
+      padding: 0.5em;
+      border-radius: 5px;
+      color: $white;
+      background-color: $gray;
+
+      @include tablet {
+        margin-left: $p;
+      }
+    }
+  }
+
   &-menu {
     position: fixed;
     width: 100%;
@@ -101,15 +123,42 @@
         width: $content-wide;
       }
 
+      h3 {
+        font-size: $h2-mobile;
+        margin: 1em 0 0.25em 0;
+
+        @include laptop {
+          font-size: $h3;
+          margin: 1em 0;
+        }
+      }
+
+      .first-title {
+        margin: 0 0 0.25em 0;
+
+        @include laptop {
+          margin: 1em 0;
+        }
+      }
+
       &-links {
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
-        padding: 1em 1em 0 1em;
+        padding: 1em 1em 7em 1em;
 
         @include laptop {
           flex-direction: row;
           justify-content: space-between;
+          padding: 1em;
+        }
+
+        a {
+          font-size: 18px;
+
+          @include laptop {
+            font-size: inherit;
+          }
         }
 
         &-topics {
